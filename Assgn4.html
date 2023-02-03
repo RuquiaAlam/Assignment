@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Assignment4</title>
+</head>
+<body>
+    <script>
+        class RestaurantRating{
+             
+              ratingData = [
+{restaurant: 'KFC', rating:5},
+{restaurant: 'Burger King', rating:4},
+{restaurant: 'KFC', rating:3},
+{restaurant: 'Domino', rating:2},
+{restaurant: 'Subway', rating:3},
+{restaurant: 'Domino', rating:1},
+{restaurant: 'Subway', rating:4},
+{restaurant: 'Pizza Hut', rating:5}
+];
+filterRestaurantByName(restaurant)
+{
+
+ let z=this.ratingData.filter(item=>item.restaurant==restaurant);
+let count=0;
+let avg=0;
+let sum=0;
+
+z.forEach((q)=>
+{
+    count=z.length;
+    sum+=q.rating;
+    avg=(sum)/count;
+
+
+        
+            
+      
+        
+        
+    });
+    z.forEach((s)=>{
+    console.log("restaurant:"+" " +s.restaurant ,  "averageRating"+" "+avg);
+
+});
+        
+// avgRating(){
+// this.ratingData.forEach(element => {
+
+// let count=0;
+//         count+=element.rating;
+//     });
+// }
+
+}    } 
+        
+     let obj= new RestaurantRating();
+        obj.filterRestaurantByName("KFC");
+        obj.filterRestaurantByName("Burger King");
+        obj.filterRestaurantByName("Domino");
+        obj.filterRestaurantByName("Subway");
+        obj.filterRestaurantByName("Pizza Hut");
+
+
+       
+    </script>
+</body>
+</html>
+
+

@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Assign3</title>
+</head>
+<body>
+    <script>
+        class restaurantManager{
+           restaurantList=[
+                { name:"Peshawar",location:"Malakpet",city:"Hyderabad"},
+                { name:"Sohail",location:"Malakpet",city:"Hyderabad"  },
+                { name:"Lucky",location:"clocktower",city:"Secunderabad"}
+            ];
+
+            
+            printRestaurantNames(){
+        
+            this.restaurantList.forEach((restro)=>{
+
+            
+            console.log(restro.name,restro.location,restro.city);
+        });
+        }
+        filterRestaurantByCity(city)
+{
+    console.log( this.restaurantList.filter(item=>item.city==city));
+}
+        
+    
+        OrderData = [
+ {option: "Below 500" ,value:20},
+ {option:'500-1000',value:29},
+ {option:'1000-1500',value: 30},
+ {option:'1500-2000',value: 44},
+ {option:'Above 2000',value: 76}
+ ];
+ 
+totalOrder(){
+
+    let sum=0;
+    this.OrderData.forEach((x)=>
+    {
+        sum+=x.value;
+    });
+    console.log(sum);
+}
+
+orderProportions()
+{
+    let count=0;
+    count+=this.OrderData.length;
+    console.log(count);
+}
+RestaurantInfo=[{
+ id: 1,
+ order: "Below 500",
+  restaurant: "Punjabi Tadka"
+},
+{
+ id: 2,
+ order: "500-1000",
+restaurant: "Punjabi Tadka"
+},
+{
+ id: 3,
+ order: "1000-1500",
+restaurant: "Punjabi Tadka"
+},
+{
+ id: 4,
+ order: "1500-2000",
+ restaurant: "Punjabi Tadka"
+},
+{
+ id: 5,
+ order: "Above 2000",
+restaurant: "Punjabi Tadka"
+}] ;
+
+ArrayOfOrders(){
+    let orderPercentage=0;
+    let total=0;
+    
+
+    this.OrderData.forEach((y)=>
+    {
+        total+=y.value;
+
+    });
+    this.OrderData.forEach((o)=>
+    
+{
+        orderPercentage=((o.value)/total)*100;
+    
+        
+}); 
+this.RestaurantInfo.forEach((b)=>
+        {
+        console.log("OrderId"+" "+b.id);
+        console.log("Order"+" "+b.order);
+        console.log("OrderPercentage"+" "+orderPercentage);
+        console.log("Restaurant"+" "+b.restaurant);
+    });
+}
+}
+
+    let obj=new restaurantManager();
+obj. printRestaurantNames();
+obj.filterRestaurantByCity("Secunderabad");
+obj.totalOrder();
+obj.orderProportions();
+obj.ArrayOfOrders();
+    </script>
+</body>
+</html>
